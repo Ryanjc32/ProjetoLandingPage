@@ -1,0 +1,119 @@
+/* import da fonte */
+@import url('https://fonts.googleapis.com/css2?family=Saira+Semi+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap'); 
+/* font-family: 'Saira Semi Condensed', sans-serif; */
+
+/* reset css */
+* { 
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+/* estilização das estruturas: */
+body {
+    background-color: #E7E6DF;
+    font-family: 'Saira Semi Condensed', sans-serif;
+    font-size: 2em;
+}
+
+main {
+    position: relative;
+    height: auto;
+}
+
+.input textarea, .input input {
+    font-family: 'Saira Semi Condensed', sans-serif;
+    font-size: 0.7em;
+}
+
+.button{
+    font-family: 'Saira Semi Condensed', sans-serif;
+    font-weight: bold;
+    padding: 5px 20px;
+    border-radius: 60px;
+    width: 150px;
+    height: 50px;
+    box-shadow: -2px 2px 0px 1px #F17D6A;
+    padding: 20px auto;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+button:hover {
+    background-color: #F17D6A;
+    color: #113940;
+    box-shadow: -2px 2px 0px 1px #113940;
+}
+
+.divisor-onda-desktop > svg {
+    position: absolute;
+    bottom: -1vh;
+    filter: drop-shadow(0px -1.5vw 0px #F17D6A);
+    z-index: -1;
+}
+
+.divisor-onda-mobile {
+    display: none;
+}
+
+.design {
+    background-color: #113940;
+    box-shadow: 0px 10px 0px 0px #F17D6A;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    height: auto;
+    
+}
+
+footer {
+    max-width: 100%;
+    background-color: #113940;
+    box-shadow: 0px -10px 0px 0px #F17D6A;
+    height: auto;
+}
+
+/* responsividade */
+
+@media (max-width: 720px) {
+    /* configurando o tamanho da fonte mobile */
+    body {
+        font-size: 1.6em;
+        overflow: auto;
+    }
+
+    main{
+        height: auto;
+    }
+    
+    .design {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        height: auto;
+        position: relative;
+    }
+
+    /* esconde a onda desktop */
+    .divisor-onda-desktop {
+        display: none;
+    }
+
+    /* ativa a onda mobile */
+    .divisor-onda-mobile {
+        display: block;
+
+    }
+
+    .divisor-onda-mobile > svg {
+        position: absolute;
+        top: -28vw;
+        filter: drop-shadow(0px -1.5vw 0px #F17D6A);
+        z-index: -1;
+        margin: 0;
+    }
+
+    button:hover {
+        box-shadow: -2px 2px 0px 1px #F17D6A;
+    }
+}

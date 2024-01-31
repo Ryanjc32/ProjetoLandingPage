@@ -1,0 +1,202 @@
+/* configurando tamanho da logo */
+.logo a > img {
+    max-width: 15vw;
+    max-height: 15vh;
+}
+
+header {
+    padding: 10px 0px;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.rolagem {
+    background-color: #E7E6DF;
+    border-bottom: 3px solid #F17D6A;
+
+}
+
+/* margem do content da header desktop | margem padrão: 5vh left e right */
+.content-header {
+    display: flex;
+    margin: 0 5vw;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-bar {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-bar nav > ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-bar nav > ul > li {
+    font-size: 0.9em;
+    font-weight: bold;
+    color: #113940;
+    text-decoration: none;
+}
+
+.nav-bar nav > ul > li > a {
+    text-decoration: none;
+    color: #113940;
+    transition: all 0.3s;
+}
+
+.nav-bar nav > ul > li > a:hover{
+    color: #F17D6A;
+    text-decoration: none;
+}
+
+/* botão compre já */
+.nav-bar button{
+    background-color: #113940;
+    width: 150px;
+    height: 50px;
+}
+
+.nav-bar button:hover {
+    background-color: #F17D6A;
+    color: #113940;
+} 
+
+.nav-bar button > p:hover {
+    color: #113940;
+} 
+
+.nav-bar button > p{
+    font-size: 1.5em;
+    color: #E7E6DF;
+    
+}
+
+/* criando o hamburguer menu */
+.mobile-menu {
+    display: none;
+    cursor: pointer;
+}
+
+.mobile-menu div {
+    width: 40px;
+    height: 5px;
+    background-color: #113940;
+    margin: 8px;
+    border-radius: 10px;
+}
+
+/* responsividade */
+@media (max-width: 720px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    /* margem da header mobile */
+    .content-header {
+        margin: 0 10vw;
+    }
+
+    /* invertendo a posição da logo com o menu hamburguer */
+    .flex-mobile {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .logo {
+        order: 1;
+    }
+
+    .mobile-menu {
+        order: 0;
+        display: block;
+    }
+    
+    .content-header {
+        display: block;
+    }
+
+    /* criando o hamburguer menu fechar (X) */
+    .mobile-menu-fechar {
+        cursor: pointer;
+        padding: 20px 0px;
+        width: 100%;
+        border-bottom: 1px solid #E7E6DF;
+    }
+
+    .mobile-menu-fechar div {
+        width: 40px;
+        height: 5px;
+        background-color: #E7E6DF;
+        margin: 8px;
+        border-radius: 10px;
+    }
+    .mobile-menu-fechar .line1{
+        transform: rotate(-45deg) translate(-1px, 7px);
+    }
+
+    .mobile-menu-fechar .line2{
+        transform: rotate(45deg) translate(-2px, -8px);
+    }
+
+    .nav-bar {
+        transform: translateX(-120%);
+        transition: transform 0.3s ease-in;
+        position: absolute;
+        top: 0;
+        left: 0;
+        flex-direction: column;
+        align-items: start;
+        width: 70vw;
+        height: 100vh;
+        background-color: #113940;
+        box-shadow: 2px 0px 13px 6px rgba(0,0,0,0.75);
+        z-index: 1000;
+    }
+
+    .active {
+        transform: translateX(0);
+    }
+
+    .nav-bar nav {
+        width: 100%;
+    }
+
+    .nav-bar nav > ul{
+        flex-direction: column;
+    }
+
+    .nav-bar nav > ul > li {
+        padding: 20px;
+        font-size: 0.9em;
+        font-weight: bold;
+        border-bottom: 1px solid #E7E6DF;
+    }
+
+    .nav-bar nav > ul > li > a {
+        text-decoration: none;
+        color: #E7E6DF;
+    }
+    
+    /* botão compre já */
+    .nav-bar button{
+        background-color: #E7E6DF;
+        margin: 20px auto;
+        margin-left: 10px;
+    }
+
+    .nav-bar button > p{    
+        color: #113940;
+    }
+
+
+    /* reconfigurando a nav-bar para o mobile */
+
+}
